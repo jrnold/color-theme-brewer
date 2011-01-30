@@ -135,8 +135,6 @@
      (region ((t (:background "gray"))))
      (minibuffer-prompt ((t (:foreground "#7299ff" :bold t))))
      
-     (show-paren-match-face ((t (:background ,(colorbrewer-color 'set1 'yellow)))))
-     (show-paren-mismatch-face ((t (:foreground ,(colorbrewer-color 'set1 'yellow) :background "black"))))
      
      (font-lock-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))       
      (font-lock-comment-delimiter-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
@@ -158,18 +156,59 @@
      (font-lock-doc-string-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
      
      (font-lock-warning-face ((t (:foreground ,(colorbrewer-color 'set1 'red) :bold t))))
-     (flyspell-incorrect ((t (:foreground ,(colorbrewer-color 'set1 'red) :underline t))))
-     
-     (markdown-bold-face ((t (:bold t))))
-     (markdown-italic-face ((t (:italic t))))
 
-     ;; LaTeX Faces
+     (font-lock-negation-face ((t (nil))))
+     (font-lock-regexp-grouping-backslash ((t (nil))))
+     (font-lock-regexp-grouping-construct ((t (nil))))
+
+     (link ((t (nil))))
+     (link-visited ((t (nil))))
+     (show-paren-match-face ((t (:background ,(colorbrewer-color 'set1 'yellow)))))
+     (show-paren-mismatch-face ((t (:background ,(colorbrewer-color 'set1 'red)))))
+
+     ;; Flyspell
+     (flyspell-incorrect ((t (:foreground ,(colorbrewer-color 'set1 'red) :underline t))))
+     (flyspell-duplicate ((t (:foreground ,(colorbrewer-color 'set1 'red) :underline t))))
+     ;; LaTeX 
      (font-latex-bold-face ((t (:bold t))))
-     (font-latex-italic-face ((t (:italic t))))
+     (font-latex-doctex-documentation-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+     (font-latex-doctex-preprocessor-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
+     (font-latex-math-face ((t (:foreground ,(colorbrewer-color 'set1 'brown))))) 
+     (font-latex-sectioning-0-face ((t (:bold t))))           
+     (font-latex-sectioning-1-face ((t (:bold t))))
+     (font-latex-sectioning-2-face ((t (:bold t))))
+     (font-latex-sectioning-3-face ((t (:bold t))))              
+     (font-latex-sectioning-4-face ((t (:bold t))))             
+     (font-latex-sectioning-5-face ((t (:bold t))))            
      (font-latex-sedate-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+     (font-latex-slide-title-face ((t (:bold t))))
      (font-latex-string-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
+     (font-latex-subscript-face ((t (nil))))                                 
+     (font-latex-superscript-face ((t (nil))))                         
+     (font-latex-verbatim-face ((t (nil))))                 
      (font-latex-warning-face ((t (:foreground ,(colorbrewer-color 'set1 'red)))))
-     (font-latex-math-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
+
+     ;; Markdown Faces
+     (markdown-blockquote-face ((t (nil))))
+     (markdown-bold-face ((t (:bold t))))
+     (markdown-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+     (markdown-header-face ((t (:bold t))))
+     (markdown-header-face-1 ((t (:bold t))))
+     (markdown-header-face-2 ((t (:bold t))))
+     (markdown-header-face-3 ((t (:bold t))))
+     (markdown-header-face-4 ((t (:bold t))))
+     (markdown-header-face-5 ((t (:bold t))))
+     (markdown-header-face-6 ((t (:bold t))))
+     (markdown-inline-code-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
+     (markdown-italic-face ((t (:italic t))))
+     (markdown-link-face ((t (nil))))
+     (markdown-link-title-face ((t (nil))))
+     (markdown-list-face ((t (nil))))
+     ;; same as font-latex-math-face
+     (markdown-math-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
+     (markdown-pre-face ((t (nil))))
+     (markdown-reference-face ((t (nil))))
+     (markdown-url-face ((t (nil))))
      )))
 
 (provide 'colorbrewer)
