@@ -20,10 +20,6 @@
 
 ;; Set1 tried to match hues with color-theme-standard
 
-(defun cdrassq (key alist) 
-  "Returns cdr of first ssociation for KEY in ALIST using assq"
-  (cdr (assq key alist)))
-
 (defconst colorbrewer-palettes 
   '((accent .
 	    ((green . "#7FC97F")
