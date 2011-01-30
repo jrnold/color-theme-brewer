@@ -124,18 +124,21 @@
       (border-color . "black")
       (background-mode . light))
      (default ((t (nil))))
-
      (bold ((t (:bold t))))
      (italic ((t (:italic t))))
      (bold-italic ((t (:bold t :italic t))))
      (underline ((t (:underline t))))
-     
+
      (fringe ((t (:background "#000000"))))
-     (mode-line ((t (:foreground "#000000" :background "#666666"))))
      (region ((t (:background "gray"))))
+     (mode-line ((t (:foreground "#000000" :background "#666666"))))
      (minibuffer-prompt ((t (:foreground "#7299ff" :bold t))))
      
+     ;; linum
+     ;; set to comment color
+     (linum ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
      
+     ;; font-lock faces
      (font-lock-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))       
      (font-lock-comment-delimiter-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
 
@@ -209,6 +212,7 @@
      (markdown-pre-face ((t (nil))))
      (markdown-reference-face ((t (nil))))
      (markdown-url-face ((t (nil))))
+     
      )))
 
 (provide 'colorbrewer)
