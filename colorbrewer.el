@@ -8,7 +8,6 @@
 ;; Color palettes from ColorBrewer 2.0, http://colorbrewer2.org/
 ;; This only includes the qualitative color palettes.
 
-
 ;; Links to ColorBrewer themes used in colorbrewer-palette
 ;; Accent http://colorbrewer2.org/index.php?type=qualitative&scheme=Accent&n=8
 ;; Dark2 http://colorbrewer2.org/index.php?type=qualitative&scheme=Dark2&n=8
@@ -18,6 +17,8 @@
 ;; Set1 http://colorbrewer2.org/index.php?type=qualitative&scheme=Set1&n=9
 ;; Set2 http://colorbrewer2.org/index.php?type=qualitative&scheme=Set2&n=8
 ;; Set3 http://colorbrewer2.org/index.php?type=qualitative&scheme=Set3&n=12
+
+;; Set1 tried to match hues with color-theme-standard
 
 (defun cdrassq (key alist) 
   "Returns cdr of first ssociation for KEY in ALIST using assq"
@@ -129,8 +130,9 @@
      (default ((t (nil))))
 
      (bold ((t (:bold t))))
-     (bold-italic ((t (:bold t :italic t))))
      (italic ((t (:italic t))))
+     (bold-italic ((t (:bold t :italic t))))
+     (underline ((t (:underline t))))
      
      (fringe ((t (:background "#000000"))))
      (mode-line ((t (:foreground "#000000" :background "#666666"))))
@@ -140,23 +142,38 @@
      (show-paren-match-face ((t (:background ,(colorbrewer-color 'set1 'yellow)))))
      (show-paren-mismatch-face ((t (:foreground ,(colorbrewer-color 'set1 'yellow) :background "black"))))
      
-     (font-lock-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'pink)))))       
-     (font-lock-comment-delimiter-face ((t (:foreground ,(colorbrewer-color 'set1 'pink)))))
+     (font-lock-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))       
+     (font-lock-comment-delimiter-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
 
-     (font-lock-constant-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
-     
-     (font-lock-function-name-face ((t (:foreground ,(colorbrewer-color 'set1 'purple)))))
-     (font-lock-variable-name-face ((t (:foreground ,(colorbrewer-color 'set1 'purple)))))
-
-     (font-lock-builtin-face ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
-     (font-lock-keyword-face ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
-
+     (font-lock-preprocessor-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
      (font-lock-type-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
+
+     (font-lock-builtin-face ((t (:foreground ,(colorbrewer-color 'set1 'pink)))))
+
+     (font-lock-keyword-face ((t (:foreground ,(colorbrewer-color 'set1 'purple)))))
+     
+     (font-lock-function-name-face ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
+     (font-lock-constant-face ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
+
+     (font-lock-variable-name-face ((t (:foreground ,(colorbrewer-color 'set1 'orange)))))
 
      (font-lock-string-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
      (font-lock-doc-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
+     (font-lock-doc-string-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
      
      (font-lock-warning-face ((t (:foreground ,(colorbrewer-color 'set1 'red) :bold t))))
+     (flyspell-incorrect ((t (:foreground ,(colorbrewer-color 'set1 'red) :underline t))))
+     
+     (markdown-bold-face ((t (:bold t))))
+     (markdown-italic-face ((t (:italic t))))
+
+     ;; LaTeX Faces
+     (font-latex-bold-face ((t (:bold t))))
+     (font-latex-italic-face ((t (:italic t))))
+     (font-latex-sedate-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+     (font-latex-string-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
+     (font-latex-warning-face ((t (:foreground ,(colorbrewer-color 'set1 'red)))))
+     (font-latex-math-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
      )))
 
 (provide 'colorbrewer)
