@@ -125,8 +125,8 @@
       (background-mode . light))
      (default ((t (nil))))
      (bold ((t (:bold t))))
-     (italic ((t (:italic t))))
-     (bold-italic ((t (:bold t :italic t))))
+     (italic ((t (:italic t :slant italic))))
+     (bold-italic ((t (:bold t :italic t :slant italic))))
      (underline ((t (:underline t))))
 
      (fringe ((t (:background "#000000"))))
@@ -185,7 +185,7 @@
      (font-latex-sectioning-5-face ((t (:bold t))))            
      (font-latex-sedate-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
      (font-latex-slide-title-face ((t (:bold t))))
-     (font-latex-string-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
+     (font-latex-string-face ((t (nil))))
      (font-latex-subscript-face ((t (nil))))                                 
      (font-latex-superscript-face ((t (nil))))                         
      (font-latex-verbatim-face ((t (nil))))                 
@@ -212,6 +212,67 @@
      (markdown-pre-face ((t (nil))))
      (markdown-reference-face ((t (nil))))
      (markdown-url-face ((t (nil))))
+
+     ;; org-mode
+     ;; (org-agenda-clocking ((t ())))
+;; org-agenda-column-dateline
+;; org-agenda-date
+;; org-agenda-date-today
+;; org-agenda-date-weekend
+;; org-agenda-diary
+;; org-agenda-dimmed-todo-face
+;; org-agenda-done
+;; org-agenda-restriction-lock
+;; org-agenda-structure
+;; org-archived
+;; org-block
+;; org-checkbox
+;; org-checkbox-statistics-done
+;; org-checkbox-statistics-todo
+;; org-clock-overlay
+;; org-code
+;; org-column
+;; org-column-title
+;; org-date
+;; org-document-info
+;; org-document-info-keyword
+;; org-document-title
+;; org-done
+;; org-drawer
+;; org-ellipsis
+;; org-footnote
+;; org-formula
+;; org-headline-done
+;; org-hide
+;; org-latex-and-export-specials
+;; org-level-1
+;; org-level-2
+;; org-level-3
+;; org-level-4
+;; org-level-5
+;; org-level-6
+;; org-level-7
+;; org-level-8
+;; org-link
+;; org-meta-line
+;; org-mode-line-clock
+;; org-mode-line-clock-overrun
+;; org-property-value
+;; org-quote
+;; org-scheduled
+;; org-scheduled-previously
+;; org-scheduled-today
+;; org-sexp-date
+;; org-special-keyword
+;; org-table
+;; org-tag
+;; org-target
+;; org-time-grid
+;; org-todo
+;; org-upcoming-deadline
+;; org-verbatim
+;; org-verse
+     ;; (org-warning ((t (:foreground ,(colorbrewer-color 'set1 'red))))
      
      )))
 
