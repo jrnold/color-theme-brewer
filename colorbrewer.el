@@ -164,8 +164,8 @@
      (font-lock-regexp-grouping-backslash ((t (nil))))
      (font-lock-regexp-grouping-construct ((t (nil))))
 
-     (link ((t (nil))))
-     (link-visited ((t (nil))))
+     (link ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
+     (link-visited ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
      (show-paren-match-face ((t (:background ,(colorbrewer-color 'set1 'yellow)))))
      (show-paren-mismatch-face ((t (:background ,(colorbrewer-color 'set1 'red)))))
 
@@ -174,6 +174,7 @@
      (flyspell-duplicate ((t (:foreground ,(colorbrewer-color 'set1 'red) :underline t))))
      ;; LaTeX 
      (font-latex-bold-face ((t (:bold t))))
+     (font-latex-italic-face ((t (:italic t))))
      (font-latex-doctex-documentation-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
      (font-latex-doctex-preprocessor-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
      (font-latex-math-face ((t (:foreground ,(colorbrewer-color 'set1 'brown))))) 
@@ -188,11 +189,11 @@
      (font-latex-string-face ((t (nil))))
      (font-latex-subscript-face ((t (nil))))                                 
      (font-latex-superscript-face ((t (nil))))                         
-     (font-latex-verbatim-face ((t (nil))))                 
+     (font-latex-verbatim-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
      (font-latex-warning-face ((t (:foreground ,(colorbrewer-color 'set1 'red)))))
 
      ;; Markdown Faces
-     (markdown-blockquote-face ((t (nil))))
+     (markdown-blockquote-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
      (markdown-bold-face ((t (:bold t))))
      (markdown-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
      (markdown-header-face ((t (:bold t))))
@@ -203,15 +204,19 @@
      (markdown-header-face-5 ((t (:bold t))))
      (markdown-header-face-6 ((t (:bold t))))
      (markdown-inline-code-face ((t (:foreground ,(colorbrewer-color 'set1 'green)))))
-     (markdown-italic-face ((t (:italic t))))
-     (markdown-link-face ((t (nil))))
-     (markdown-link-title-face ((t (nil))))
+     (markdown-italic-face ((t (:italic t :slant italic))))
+     (markdown-link-face ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
+     (markdown-link-title-face ((t (:foreground ,(colorbrewer-color 'set1 'blue)))))
      (markdown-list-face ((t (nil))))
      ;; same as font-latex-math-face
      (markdown-math-face ((t (:foreground ,(colorbrewer-color 'set1 'brown)))))
      (markdown-pre-face ((t (nil))))
      (markdown-reference-face ((t (nil))))
      (markdown-url-face ((t (nil))))
+
+     ;; ispell
+     (isearch ((t (:background ,(colorbrewer-color 'set1 'yellow)))))
+     (isearch-fail ((t (:background ,(colorbrewer-color 'set1 'red)))))
 
      ;; org-mode
      ;; (org-agenda-clocking ((t ())))
