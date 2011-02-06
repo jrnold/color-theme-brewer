@@ -123,7 +123,9 @@
       (cursor-color . "black")
       (border-color . "black")
       (background-mode . light))
+
      (default ((t (nil))))
+
      (bold ((t (:bold t))))
      (italic ((t (:italic t :slant italic))))
      (bold-italic ((t (:bold t :italic t :slant italic))))
@@ -279,6 +281,113 @@
      ;; org-verse
      ;; (org-warning ((t (:foreground ,(colorbrewer-color 'set1 'red))))
      
+     )))
+
+(defun color-theme-brewer-pastel1 ()
+  "Color theme based on the ColorBrewer Qualitative Color Scheme Pastel1"
+  (interactive)
+  (color-theme-install
+   `(color-theme-brewer-pastel1
+     ((background-color . "#555555")
+      (foreground-color . ,(colorbrewer-color 'pastel1 'gray))
+      (mouse-color . "white")
+      (cursor-color . "white")
+      (border-color . "white")
+      (background-mode . dark))
+     (default ((t (nil))))
+     (bold ((t (:bold t))))
+     (italic ((t (:italic t :slant italic))))
+     (bold-italic ((t (:bold t :italic t :slant italic))))
+     (underline ((t (:underline t))))
+
+     (fringe ((t (:background "#000000"))))
+     (region ((t (:background "gray"))))
+     (mode-line ((t (:foreground "#000000" :background "#666666"))))
+     (minibuffer-prompt ((t (:foreground "white" :bold t))))
+     
+     ;; linum
+     ;; set to comment color
+     (linum ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+     
+     ;; font-lock faces
+     (font-lock-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))       
+     (font-lock-comment-delimiter-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+
+     (font-lock-preprocessor-face ((t (:foreground ,(colorbrewer-color 'pastel1 'green)))))
+     (font-lock-type-face ((t (:foreground ,(colorbrewer-color 'pastel1 'green)))))
+
+     (font-lock-builtin-face ((t (:foreground ,(colorbrewer-color 'pastel1 'pink)))))
+
+     (font-lock-keyword-face ((t (:foreground ,(colorbrewer-color 'pastel1 'purple)))))
+     
+     (font-lock-function-name-face ((t (:foreground ,(colorbrewer-color 'pastel1 'blue)))))
+     (font-lock-constant-face ((t (:foreground ,(colorbrewer-color 'pastel1 'blue)))))
+
+     (font-lock-variable-name-face ((t (:foreground ,(colorbrewer-color 'pastel1 'orange)))))
+
+     (font-lock-string-face ((t (:foreground ,(colorbrewer-color 'pastel1 'brown)))))
+     (font-lock-doc-face ((t (:foreground ,(colorbrewer-color 'pastel1 'brown)))))
+     (font-lock-doc-string-face ((t (:foreground ,(colorbrewer-color 'pastel1 'gray)))))
+     
+     (font-lock-warning-face ((t (:foreground ,(colorbrewer-color 'pastel1 'red) :bold t))))
+
+     (font-lock-negation-face ((t (nil))))
+     (font-lock-regexp-grouping-backslash ((t (nil))))
+     (font-lock-regexp-grouping-construct ((t (nil))))
+
+     (link ((t (:foreground ,(colorbrewer-color 'pastel1 'blue)))))
+     (link-visited ((t (:foreground ,(colorbrewer-color 'pastel1 'brown)))))
+     (show-paren-match-face ((t (:background ,(colorbrewer-color 'pastel1 'yellow)))))
+     (show-paren-mismatch-face ((t (:background ,(colorbrewer-color 'pastel1 'red)))))
+
+     ;; Flyspell
+     (flyspell-incorrect ((t (:foreground ,(colorbrewer-color 'pastel1 'red) :underline t))))
+     (flyspell-duplicate ((t (:foreground ,(colorbrewer-color 'pastel1 'red) :underline t))))
+     ;; LaTeX 
+     (font-latex-bold-face ((t (:bold t))))
+     (font-latex-italic-face ((t (:italic t))))
+     (font-latex-doctex-documentation-face ((t (:foreground ,(colorbrewer-color 'pastel1 'gray)))))
+     (font-latex-doctex-preprocessor-face ((t (:foreground ,(colorbrewer-color 'pastel1 'green)))))
+     (font-latex-math-face ((t (:foreground ,(colorbrewer-color 'pastel1 'brown))))) 
+     (font-latex-sectioning-0-face ((t (:bold t))))           
+     (font-latex-sectioning-1-face ((t (:bold t))))
+     (font-latex-sectioning-2-face ((t (:bold t))))
+     (font-latex-sectioning-3-face ((t (:bold t))))              
+     (font-latex-sectioning-4-face ((t (:bold t))))             
+     (font-latex-sectioning-5-face ((t (:bold t))))            
+     (font-latex-sedate-face ((t (:foreground ,(colorbrewer-color 'pastel1 'gray)))))
+     (font-latex-slide-title-face ((t (:bold t))))
+     (font-latex-string-face ((t (nil))))
+     (font-latex-subscript-face ((t (nil))))                                 
+     (font-latex-superscript-face ((t (nil))))                         
+     (font-latex-verbatim-face ((t (:foreground ,(colorbrewer-color 'pastel1 'green)))))
+     (font-latex-warning-face ((t (:foreground ,(colorbrewer-color 'pastel1 'red)))))
+
+     ;; Markdown Faces
+     (markdown-blockquote-face ((t (:foreground ,(colorbrewer-color 'pastel1 'green)))))
+     (markdown-bold-face ((t (:bold t))))
+     (markdown-comment-face ((t (:foreground ,(colorbrewer-color 'set1 'gray)))))
+     (markdown-header-face ((t (:bold t))))
+     (markdown-header-face-1 ((t (:bold t))))
+     (markdown-header-face-2 ((t (:bold t))))
+     (markdown-header-face-3 ((t (:bold t))))
+     (markdown-header-face-4 ((t (:bold t))))
+     (markdown-header-face-5 ((t (:bold t))))
+     (markdown-header-face-6 ((t (:bold t))))
+     (markdown-inline-code-face ((t (:foreground ,(colorbrewer-color 'pastel1 'green)))))
+     (markdown-italic-face ((t (:italic t :slant italic))))
+     (markdown-link-face ((t (:foreground ,(colorbrewer-color 'pastel1 'blue)))))
+     (markdown-link-title-face ((t (:foreground ,(colorbrewer-color 'pastel1 'blue)))))
+     (markdown-list-face ((t (nil))))
+     ;; same as font-latex-math-face
+     (markdown-math-face ((t (:foreground ,(colorbrewer-color 'pastel1 'brown)))))
+     (markdown-pre-face ((t (nil))))
+     (markdown-reference-face ((t (nil))))
+     (markdown-url-face ((t (nil))))
+
+     ;; ispell
+     (isearch ((t (:background ,(colorbrewer-color 'pastel1 'yellow)))))
+     (isearch-fail ((t (:background ,(colorbrewer-color 'pastel1 'red)))))
      )))
 
 (provide 'colorbrewer)
